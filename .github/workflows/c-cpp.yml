@@ -33,4 +33,4 @@ name: Create Release
         with:
           files: build/miko
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
