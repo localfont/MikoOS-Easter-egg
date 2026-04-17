@@ -2,9 +2,9 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "./github/workflows" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "./github/workflows" ]
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
 
     - name: Compile MikoOS CLI
       run: |
-        g++ main.cpp -o miko -static
+        g++ src/main.cpp -o miko -static
 
     - name: Test Binary
       run: |
