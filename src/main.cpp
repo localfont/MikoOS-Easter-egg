@@ -52,3 +52,13 @@ void handle_miko_cmd(char *flag) {
         }
     }
 }
+
+int main(int argc, char *argv[]) {
+    // Eğer bir argüman girilmişse onu işle, girilmemişse NULL gönder
+    if (argc > 1) {
+        handle_miko_cmd(argv[1]);
+    } else {
+        handle_miko_cmd(NULL);
+    }
+    return 0;
+}
