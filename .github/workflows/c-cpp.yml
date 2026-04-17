@@ -15,12 +15,10 @@ jobs:
 
     - name: Compile MikoOS CLI
       run: |
-        # main.cpp dosyasını statik olarak derle (Buildroot uyumluluğu için)
         g++ main.cpp -o miko -static
 
     - name: Test Binary
       run: |
-        # Derlenen dosyanın çalışıp çalışmadığını kontrol et
         chmod +x miko
         ./miko --help || true
 
